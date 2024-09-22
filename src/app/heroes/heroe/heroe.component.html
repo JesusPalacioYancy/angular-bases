@@ -1,0 +1,35 @@
+<h1> {{name}} </h1>
+
+<dl>
+    <td>Nombre:</td>
+    <dd>{{ name }}</dd>
+
+    <td>Edad:</td>
+    <dd>{{ age }}</dd>
+
+    <td>Metodo:</td>
+    <dd> {{ unionInfo() }} </dd>
+
+    <td>Capitalizador:</td>
+    <dd>{{ capitalizeName }}</dd>
+
+</dl>
+
+
+<button
+    *ngIf="name !== 'Spiderman' "
+    (click)="changeHero()" class="btn btn-primary mx-2"
+    > Cambiar nombre
+</button>
+
+<button 
+    *ngIf="age !== 18 "
+    (click)="changeAge()" class="btn btn-primary mx-2"
+> Cambiar edad
+</button>
+
+<button 
+    *ngIf="name !== 'Iron Man' &&  age !== 45 "
+    (click)="resetDescription()" class="btn btn-primary mx-2"
+> Reset
+</button>
