@@ -12,15 +12,20 @@ export class MainPageComponent {
     public characterList: Character[] = [
         {
             name: "Goku",
-            pawer: 12333
+            power: 12333
         },
         {
             name: "Vegeta",
-            pawer: 23322
+            power: 23322
         },
         {
             name: "Ghoan",
-            pawer: 7000000
+            power: 7000000
         }
     ];
+
+    onNewCharacter(character: Character): void {
+        this.characterList.push(character)
+    };
+
 };
